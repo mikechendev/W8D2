@@ -5,9 +5,7 @@ Array.prototype.bubbleSort = function () {
         sorted = true;
         for (i = 0; i < arr.length - 1; i++) {
             for (j = (i+1); j < arr.length; j++) {
-                if (arr[i] < arr[j]) {
-                    continue;
-                } else {
+                if (arr[i] > arr[j]) {
                     [arr[i], arr[j]] = [arr[j], arr[i]];
                     sorted = false;
                 }
@@ -21,7 +19,7 @@ Array.prototype.bubbleSort = function () {
 
 String.prototype.subStrings = function () {
     let result = [];
-    for (i=0; i < this.length; i++) {
+    for (i = 0; i < this.length; i++) {
         for(j = i + 1; j < this.length + 1; j++) {
             result.push(this.slice(i, j));
         }
@@ -29,4 +27,4 @@ String.prototype.subStrings = function () {
     return result;
 }
 
-//console.log('string'.subStrings());
+console.log('string'.subStrings());

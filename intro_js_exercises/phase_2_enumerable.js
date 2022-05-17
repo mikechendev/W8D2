@@ -1,5 +1,5 @@
 Array.prototype.myEach = function(callback) {
-    for(i=0; i<this.length; i++) {
+    for (let i=0; i<this.length; i++) {
         callback(this[i]);
     }
 }
@@ -10,9 +10,9 @@ Array.prototype.myMap = function(callback) {
     return result;
 }
 
-Array.prototype.myReduce = function(callback, initialValue=0) {
+Array.prototype.myReduce = function(callback, initialValue) {
     let arr = this;
-    if (initialValue === 0) {
+    if (!initialValue) {
         initialValue = this[0];
         arr = this.slice(1);
     }
